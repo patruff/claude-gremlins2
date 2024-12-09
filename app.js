@@ -1,15 +1,18 @@
 const audioClips = [
-    { name: 'brainstorm', file: 'audio/g2_brainstorm.wav' },
-    { name: 'long', file: 'audio/g2_long.wav' },
-    { name: 'pizza', file: 'audio/g2_pizza.wav' },
-    { name: 'sadsacks', file: 'audio/g2_sadsacks.wav' },
-    { name: 'thisisg2', file: 'audio/g2_thisisg2.wav' }
+    { name: 'brainstorm', file: './audio/g2_brainstorm.wav' },
+    { name: 'long', file: './audio/g2_long.wav' },
+    { name: 'pizza', file: './audio/g2_pizza.wav' },
+    { name: 'sadsacks', file: './audio/g2_sadsacks.wav' },
+    { name: 'thisisg2', file: './audio/g2_thisisg2.wav' }
 ];
 
 function SoundButton({ name, file }) {
     const playSound = () => {
+        console.log('Playing:', file); // Add debugging
         const audio = new Audio(file);
-        audio.play();
+        audio.play().catch(error => {
+            console.error('Error playing audio:', error); // Add error handling
+        });
     };
 
     return (
