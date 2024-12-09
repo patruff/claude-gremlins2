@@ -1,18 +1,1 @@
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: .
+bmFtZTogRGVwbG95IHRvIEdpdEh1YiBQYWdlcwoKb246CiAgcHVzaDoKICAgIGJyYW5jaGVzOgogICAgICAtIG1haW4KCmpvYnM6CiAgZGVwbG95OgogICAgcnVucy1vbjogdWJ1bnR1LWxhdGVzdAogICAgc3RlcHM6CiAgICAgIC0gdXNlczogYWN0aW9ucy9jaGVja291dEB2MwoKICAgICAgLSBuYW1lOiBEZXBsb3kgdG8gR2l0SHViIFBhZ2VzCiAgICAgICAgdXNlczogSmFtZXNJdmVzL2dpdGh1Yi1wYWdlcy1kZXBsb3ktYWN0aW9uQHY0CiAgICAgICAgd2l0aDoKICAgICAgICAgIGJyYW5jaDogZ2gtcGFnZXMKICAgICAgICAgIGZvbGRlcjogLg==
