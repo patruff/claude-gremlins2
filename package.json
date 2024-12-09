@@ -1,0 +1,12 @@
+{
+  "name": "claude-gremlins2",
+  "version": "1.0.0",
+  "description": "A soundboard app featuring audio clips from Gremlins 2",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
