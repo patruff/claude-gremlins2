@@ -11,25 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Copy audio files
-        run: |
-          mkdir -p dist/audio
-          cp audio/* dist/audio/
-
-      - name: Copy static files
-        run: |
-          cp index.html dist/
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist
+          folder: .
